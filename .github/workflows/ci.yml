@@ -1,0 +1,25 @@
+name: Build and verify Windows patch
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.22.2'
+      - run: node --test test/*.test.cjs
+      - run: node scripts/build-release.cjs
+      - run: node scripts/test-release.cjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: TokenTracker-CherryStudio-1.1.5-r5-Windows
+          path: |
+            .release/*.zip
+            .release/*.sha256
+          if-no-files-found: error

@@ -1,0 +1,10 @@
+.build/
+.release/
+.deployment-backups/
+.local-patch/
+node_modules/
+.env*
+*.log
+*.sqlite*
+*.jsonl
+.di_shots/

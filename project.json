@@ -1,0 +1,19 @@
+{
+  "name": "TokenTracker-CherryStudio",
+  "repository": "anpluto/TokenTracker-CherryStudio",
+  "description": "Unofficial Windows patch for TokenTracker to read Cherry Studio token usage, sessions and local API platform names. CherryStudio 用量适配补丁。",
+  "topics": [
+    "tokentracker",
+    "cherry-studio",
+    "token-usage",
+    "windows",
+    "powershell"
+  ],
+  "patchId": "cherrystudio-1.1.5-r5",
+  "releaseName": "TokenTracker-CherryStudio-1.1.5-r5-Windows",
+  "upstream": "https://github.com/xiufengsun/TokenTracker.git",
+  "upstreamTag": "v1.1.5",
+  "upstreamCommit": "d7274599df793f970b9a6559a1882ff7d5b1e7f2",
+  "patch": "patches/tokentracker-v1.1.5.patch",
+  "patchSha256": "febe0b2da252563608419f1a3cef4787451ef8528c171a7f9029b3090e5a1c43"
+}
